@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.main">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="606.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../bilder/statResult_background.jpg" />
+         </image>
+      </ImageView>
+      <BorderPane layoutX="209.0" layoutY="78.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <Label text="Stats" textFill="#ee18eb" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="CityBirds" size="48.0" />
+               </font>
+            </Label>
+         </top>
+         <bottom>
+            <Button mnemonicParsing="false" onAction="#backStat" text="Back..." textFill="#ff00e5" BorderPane.alignment="CENTER_LEFT">
+               <font>
+                  <Font name="CityBirds" size="18.0" />
+               </font>
+            </Button>
+         </bottom>
+         <center>
+            <TableView fx:id="tableView_raceStat" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="raceID_raceStat" prefWidth="46.0" text="Race" />
+                <TableColumn fx:id="ponyID_raceStat" prefWidth="47.0" text="Pony" />
+                  <TableColumn fx:id="jockeyID_raceStat" prefWidth="52.0" text="Jockey" />
+                  <TableColumn fx:id="score_raceStat" prefWidth="62.0" text="Score" />
+                  <TableColumn fx:id="luck_raceStat" prefWidth="44.0" text="Luck" />
+                  <TableColumn fx:id="skill_raceStat" prefWidth="48.0" text="Skill" />
+                  <TableColumn fx:id="tempo_raceStat" prefWidth="54.0" text="Tempo" />
+                  <TableColumn fx:id="rank_raceStat" prefWidth="54.0" text="Rank" />
+              </columns>
+               <BorderPane.margin>
+                  <Insets bottom="250.0" left="100.0" right="100.0" />
+               </BorderPane.margin>
+            </TableView>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

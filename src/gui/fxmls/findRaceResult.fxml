@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.main">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../bilder/findRaceList_background.png" />
+         </image>
+      </ImageView>
+      <BorderPane layoutX="192.0" layoutY="107.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <TableView fx:id="tableView_resultFindRace" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="ID_resultFindRace" prefWidth="31.0" text="Race" />
+                <TableColumn fx:id="pony_resultFindRace" prefWidth="35.0" text="Pony" />
+                  <TableColumn fx:id="jockey_resultFindRace" prefWidth="54.0" text="Jockey" />
+                  <TableColumn fx:id="score_resultFindRace" prefWidth="45.0" text="Score" />
+                  <TableColumn fx:id="luck_resultFindRace" prefWidth="52.0" text="Luck" />
+                  <TableColumn fx:id="skill_resultFindRace" minWidth="3.0" prefWidth="44.0" text="Skill" />
+                  <TableColumn fx:id="tempo_resultFindRace" minWidth="0.0" prefWidth="63.0" text="Tempo" />
+                  <TableColumn fx:id="rank_resultFindRace" prefWidth="69.0" text="Rank" />
+              </columns>
+               <BorderPane.margin>
+                  <Insets left="100.0" right="100.0" top="50.0" />
+               </BorderPane.margin>
+            </TableView>
+         </center>
+         <top>
+            <Label text="Races" textFill="#28b6e1" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="CityBirds" size="48.0" />
+               </font>
+            </Label>
+         </top>
+         <bottom>
+            <Button mnemonicParsing="false" onAction="#backFind" text="Back..." textFill="#5eb4c9" BorderPane.alignment="TOP_LEFT">
+               <font>
+                  <Font name="CityBirds" size="18.0" />
+               </font>
+            </Button>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

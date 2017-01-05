@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.main">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../bilder/findPony_background.jpg" />
+         </image>
+      </ImageView>
+      <BorderPane layoutX="180.0" layoutY="75.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <Label text="Find a Pony" textFill="#efb4f8" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="CityBirds" size="36.0" />
+               </font>
+            </Label>
+         </top>
+         <bottom>
+            <GridPane BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#backFind" text="Back" textFill="#ffa5ff">
+                     <font>
+                        <Font name="CityBirds" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </GridPane>
+         </bottom>
+         <center>
+            <GridPane BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#findPonyName" text="Find" textFill="#e799eb" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+                     <font>
+                        <Font name="CityBirds" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#findPonyPhoto" text="Find" textFill="#e799eb" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="CityBirds" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#findPonyFastest" text="Find" textFill="#e799eb" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="CityBirds" size="18.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="findPony_name" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="CityBirds" size="14.0" />
+                     </font></TextField>
+                  <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <TextField fx:id="findPony_photo" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="CityBirds" size="14.0" />
+                           </font></TextField>
+                        <Button mnemonicParsing="false" onAction="#pickFile" text="Browse" textFill="#e799eb">
+                           <font>
+                              <Font name="CityBirds" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </GridPane>
+                  <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <CheckBox fx:id="findFastest_pony" mnemonicParsing="false" GridPane.halignment="CENTER" />
+                        <CheckBox fx:id="findSlowest_pony" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                     </children>
+                  </GridPane>
+                  <Label text="Name" textFill="#e799eb" GridPane.halignment="CENTER">
+                     <font>
+                        <Font name="CityBirds" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label text="Photo" textFill="#875d8a" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="CityBirds" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label text="Fastest/Slowest" textFill="#6a486b" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="CityBirds" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

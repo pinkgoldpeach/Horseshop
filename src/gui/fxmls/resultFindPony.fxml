@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.main">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" layoutX="184.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <image>
+            <Image url="@../bilder/findPonyList_background.jpg" />
+         </image>
+      </ImageView>
+      <BorderPane layoutX="200.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <Label text="All the results" textFill="#6b38ae" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="CityBirds" size="48.0" />
+               </font>
+            </Label>
+         </top>
+         <bottom>
+            <Button mnemonicParsing="false" onAction="#backFind" text="Back..." textFill="#7a28c3" BorderPane.alignment="TOP_LEFT">
+               <font>
+                  <Font name="CityBirds" size="18.0" />
+               </font>
+            </Button>
+         </bottom>
+         <center>
+            <TableView fx:id="tableView_resultFindPony" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="ID_resultFindPony" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="name_resultFindPony" prefWidth="75.0" text="Name" />
+                  <TableColumn fx:id="minSpeed_resultFindPony" prefWidth="75.0" text="minSpeed" />
+                  <TableColumn fx:id="maxSpeed_resultFindPony" prefWidth="75.0" text="maxSpeed" />
+                  <TableColumn fx:id="photo_resultFindPony" prefWidth="75.0" text="Photo" />
+              </columns>
+               <BorderPane.margin>
+                  <Insets left="110.0" right="110.0" />
+               </BorderPane.margin>
+            </TableView>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

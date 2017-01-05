@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.main">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../bilder/findJockey_background.jpg" />
+         </image>
+      </ImageView>
+      <BorderPane layoutX="200.0" layoutY="80.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <Label text="Find a Jockey" textFill="#131165" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="CityBirds" size="48.0" />
+               </font>
+            </Label>
+         </top>
+         <center>
+            <GridPane BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Name" textFill="#300c54" GridPane.halignment="CENTER">
+                     <font>
+                        <Font name="CityBirds" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label text="Best/Worst" textFill="#381b4d" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="CityBirds" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="findJockey_name" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </TextField>
+                  <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <CheckBox fx:id="findJockey_best" mnemonicParsing="false" GridPane.halignment="CENTER" />
+                        <CheckBox fx:id="findJockey_worst" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                     </children>
+                  </GridPane>
+                  <Button mnemonicParsing="false" onAction="#findJockeyName" text="Find" textFill="#3d0e61" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+                     <font>
+                        <Font name="CityBirds" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#findJockeyBest" text="Find" textFill="#4d195e" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="CityBirds" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </GridPane>
+         </center>
+         <bottom>
+            <Button mnemonicParsing="false" onAction="#backFind" text="Back..." textFill="#310b57" BorderPane.alignment="TOP_LEFT">
+               <font>
+                  <Font name="CityBirds" size="18.0" />
+               </font>
+            </Button>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
